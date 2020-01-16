@@ -5,16 +5,16 @@ public class Main {
         System.out.println("Multi-dimensional array");
         /*
         -------------------------------------
-        tab[0][0] | tab [0][1] | tab[0][2] |
+        arr[0][0] | arr [0][1] | arr[0][2] |
         -------------------------------------
         -------------------------------------
-        tab[1][0] | tab [1][1] | tab[1][2] |
+        arr[1][0] | arr [1][1] | arr[1][2] |
         -------------------------------------
         -------------------------------------
-        tab[2][0] | tab [2][1] | tab[2][2] |
+        arr[2][0] | arr [2][1] | arr[2][2] |
         -------------------------------------
         -------------------------------------
-        tab[3][0] | tab [3][1] | tab[3][2] |
+        arr[3][0] | arr [3][1] | arr[3][2] |
         -------------------------------------
         */
 
@@ -30,5 +30,22 @@ public class Main {
         };
         System.out.println(array2[3][0]);
 
+        //Autofill and print the array
+        int[][] autoArray = new int[5][4];
+        int a = (autoArray.length);
+        int b = (autoArray[0].length);
+
+        for (int x = 0; x < a; x++) {
+            for (int z = 0; z < b; z++) {
+                int arrValue = x+z;
+                autoArray[x][z] = arrValue ;
+                if (arrValue < 10) {
+                    System.out.print(arrValue + "\t");
+                } else {
+                    System.out.print("\n");
+                }
+            }
+            System.out.println();
+        }
     }
 }
