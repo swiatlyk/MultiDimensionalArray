@@ -37,8 +37,8 @@ public class Main {
 
         for (int x = 0; x < a; x++) {
             for (int z = 0; z < b; z++) {
-                int arrValue = x+z;
-                autoArray[x][z] = arrValue ;
+                int arrValue = x + z;
+                autoArray[x][z] = arrValue;
                 if (arrValue < 10) {
                     System.out.print(arrValue + "\t");
                 } else {
