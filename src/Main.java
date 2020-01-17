@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         System.out.println("Multi-dimensional array");
+
         /*
         -------------------------------------
         arr[0][0] | arr [0][1] | arr[0][2] |
