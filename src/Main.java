@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,7 +22,7 @@ public class Main {
 
         int[][] array = new int[4][3];
         array[0][1] = 25;
-        System.out.println(array[0][1]);
+        System.out.println("Displaying first row and second column: " + array[0][1]);
 
         int[][] array2 = {
                 {4, 15, 17},
@@ -28,17 +30,41 @@ public class Main {
                 {41, 125, 174},
                 {23, 345, 657}
         };
-        System.out.println(array2[3][0]);
+        System.out.println("Displaying forth row and first column: " + array[3][0]);
 
         //Autofill and print the array
         int[][] autoArray = new int[5][4];
-        int a = (autoArray.length);
-        int b = (autoArray[0].length);
+        int row = (autoArray.length);
+        int col = (autoArray[0].length);
 
-        for (int x = 0; x < a; x++) {
-            for (int z = 0; z < b; z++) {
+        for (int x = 0; x < row; x++) {
+            for (int z = 0; z < col; z++) {
                 int arrValue = x + z;
                 autoArray[x][z] = arrValue;
+                if (arrValue < 10) {
+                    System.out.print(arrValue + "\t");
+                } else {
+                    System.out.print("\n");
+                }
+            }
+            System.out.println();
+        }
+
+        //Provide info about array, how may rows and columns
+        Scanner inputer = new Scanner(System.in);
+        int rowManu = 0;
+        int colManu = 0;
+        System.out.println("How many row's: ");
+        rowManu = inputer.nextInt();
+        System.out.println("How many columns: ");
+        colManu = inputer.nextInt();
+        System.out.println("Will use " + row + " rows and " + col + " colums in array");
+        int[][] manuArray = new int[row][col];
+
+        for (int w = 0; w < rowManu; w++) {
+            for (int u = 0; u < colManu; u++) {
+                int arrValue = w + u;
+                manuArray[w][u] = arrValue;
                 if (arrValue < 10) {
                     System.out.print(arrValue + "\t");
                 } else {
